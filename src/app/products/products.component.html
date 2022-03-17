@@ -1,0 +1,49 @@
+<body class="container d-flex pt-4">
+    <div class="col-6 pe-5">
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Name Product</th>
+                    <th>Price</th>
+                    <th>Number</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of product">
+                    <td>{{item.id}}</td>
+                    <td>{{item.NameProduct}}</td>
+                    <td>{{item.Price}}</td>
+                    <td>{{item.Number}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger me-2" (click)="xoa(item.id)">Delete</button>
+                        <button type="button" class="btn btn-info" (click)="sua(item)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <form class="col-6 ps-5" #productForm="ngForm" (ngSubmit)="onSubmit(productForm.value)">
+        <div class="">
+            <div class="form-group">
+                <label for="my-input">Name Product</label>
+                <input type="hidden" name="id" [(ngModel)]="newProduct.id">
+                <input id="my-input" class="form-control" type="text" [value]="newProduct.NameProduct" name="NameProduct" [(ngModel)]="newProduct.NameProduct">
+            </div>
+            <div class="form-group">
+                <label for="my-input">Price</label>
+                <input id="my-input" class="form-control" type="number" name="Price" [value]="newProduct.Price" [(ngModel)]="newProduct.Price">
+            </div>
+            <div class="form-group">
+                <label for="my-input">Number</label>
+                <input id="my-input" class="form-control" type="number" name="Number" [value]="newProduct.Number" [(ngModel)]="newProduct.Number">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mt-3" [disabled]="!on_validate(newProduct)">Add </button>
+            </div>
+        </div>
+    </form>
+</body>
+<hr>
