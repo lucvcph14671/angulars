@@ -1,0 +1,13 @@
+{
+    "students": [{
+            "id": 1,
+            "name": "Vũ Công Lực",
+            "class": "ưeb16304"
+        },
+        {
+            "id": 2,
+            "name": "Vũ Công Lực 2",
+            "class": "ưeb16304"
+        }
+    ]
+}
