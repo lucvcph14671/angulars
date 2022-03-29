@@ -1,13 +1,28 @@
 {
-    "students": [{
-            "id": 1,
-            "name": "Vũ Công Lực",
-            "class": "ưeb16304"
-        },
-        {
-            "id": 2,
-            "name": "Vũ Công Lực 2",
-            "class": "ưeb16304"
-        }
-    ]
+  "students": [
+    {
+      "id": 1,
+      "name": "Vũ Công Lực",
+      "class": "ưeb16304"
+    },
+    {
+      "id": 2,
+      "name": "Vũ Công Lực 2",
+      "class": "ưeb16304"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Vũ Công Lực",
+      "content": "ưeb16304",
+      "status": "1"
+    },
+    {
+      "title": "Ngọc",
+      "content": "Helooooo",
+      "status": "1",
+      "id": 2
+    }
+  ]
 }

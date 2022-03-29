@@ -1,0 +1,25 @@
+<a routerLink="/post/form" class="btn btn-info mt-4">Tạo mới +</a>
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Status</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of post">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.content}}</td>
+            <td>{{item.status}}</td>
+            <td>
+                <button (click)="onDelete(item.id)" class="btn btn-danger me-2">Xóa</button>
+                <a routerLink="/post/form/{{item.id}}" class="btn btn-info me-2">Sửa</a>
+                <a routerLink="/post/{{item.id}}" class="btn btn-success">Chi tiết</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
